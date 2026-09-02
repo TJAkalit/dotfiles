@@ -1,0 +1,50 @@
+[general]
+import = []
+live_config_reload = true
+
+[window]
+padding = { x = 10, y = 10}
+dynamic_padding = true
+decorations = "None"
+opacity = 0.5
+
+[scrolling]
+history = 100000
+
+[font]
+normal = {
+    family = 'JetBrainsMono NFM',
+    style = 'ExtraLight'
+}
+size = 16
+
+[colors]
+primary = {
+    foreground = "#ffd60a",
+    background = "#001d3d",
+    dim_foreground = "#ffc300"
+}
+cursor = {
+    text = "CellBackground",
+    cursor = "CellForeground"
+}
+
+[colors.normal]
+black = "#000000"
+red = "#f92669"
+green = "#a5d333"
+yellow = "#e6db74"
+blue = "#027aff"
+magenta = "#AE81FF"
+cyan = "#66d9ef"
+white = "#F9F8F5"
+
+[colors.bright]
+black = "#000000"
+red = "#f92669"
+green = "#a5d333"
+yellow = "#e6db74"
+blue = "#027aff"
+magenta = "#AE81FF"
+cyan = "#66d9ef"
+white = "#F9F8F5"

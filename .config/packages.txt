@@ -1,0 +1,266 @@
+# System
+
+# System | Core
+linux
+linux-firmware
+linux-headers
+
+# System | CPU Drivers
+amd-ucode
+intel-ucode
+
+# System | GPU Drivers
+vulkan-intel
+lib32-vulkan-intel
+mesa-utils
+vulkan-tools
+
+# System | Block device management
+lvm2
+
+# System | File System management
+btrfs-progs
+
+# System | File System management | [btrfs] | utils
+duperemove
+bees
+compsize
+
+# System | Boot screen
+plymouth
+
+# System | CPU Management
+power-profiles-daemon
+
+# System | Screen
+brightnessctl
+
+# System | Desktop
+
+# System | Desktop | Login manager
+sddm
+
+# System | Desktop | Environment
+niri
+
+# System | Desktop | Environment | X11 compatibility
+xwayland-satellite
+
+# System | Desktop | Environment | System calls
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
+
+# System | Desktop | Environment | ?
+# Тест для трансляции discord
+qt6-multimedia-ffmpeg
+rtkit
+
+# System | Desktop | Dark Theme
+gnome-themes-extra
+
+# System | Desktop | Statusbar
+waybar
+
+# System | Desktop | Statusbar | [waybar] | requirements
+python-dbus
+
+# System | Desktop | Notifications
+mako
+
+# System | Desktop | Launcher
+fuzzel
+
+# System | Desktop | Wallpaper
+swaybg
+
+# System | Desktop | Sleep
+swayidle
+swaylock
+
+# System | Virtualization
+virtualbox
+virtualbox-host-dkms
+
+# System | Fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ttf-liberation
+ttf-dejavu
+ttf-droid
+ttf-ubuntu-font-family
+terminus-font
+ttf-nerd-fonts-symbols
+ttf-jetbrains-mono-nerd
+
+# System | Fonts | [libreoffice-still-ru] | dependecy
+ttf-caladea
+ttf-carlito
+ttf-linux-libertine-g
+adobe-source-code-pro-fonts
+adobe-source-sans-fonts
+adobe-source-serif-fonts
+
+# Applications
+# Applications | Shell
+bash-completion
+tmux
+
+# Applications | Shell | [tmux] | dependency
+python-libtmux
+entr
+
+# Applications | Shell | Graphical
+alacritty
+
+# Applications | Configuration Management
+stow
+
+# Applications | Remote Access
+openssh
+sshuttle
+sshpass
+
+# Applications | Remote Access | Graphical
+remmina
+# Applications | Remote Access | Graphical | [remmina] | dependecy
+freerdp
+
+# Applications | Downloads
+wget
+curl
+
+# Applications | Downloads | Graphical
+qbittorrent
+
+# Applications | Network
+traceroute
+networkmanager-openvpn
+
+# Applications | Network | [sshuttle] | dependecy
+iptables-legacy
+nftables
+
+# Applications | Network | Graphical
+network-manager-applet
+
+# Applications | Bluetooth
+bluez
+bluez-utils
+blueman
+
+# Applications | Filemanager
+lsd
+
+# Applications | Filemanager | Graphical
+nautilus
+# Applications | Filemanager | Graphical | [nautilus] | dependecy
+gvfs-smb
+file-roller
+
+# Applications | Show text file content
+bat
+
+# Applications | Text editor
+vim
+# Applications | Text editor | Graphical
+
+# Applications | Pictures
+# Applications | Pictures | Graphical
+eog
+gimp
+
+# Applications | Web
+# Applications | Web | Graphical
+firefox
+
+# Applications | System monitoring
+htop
+iotop
+
+# Applications | Manual pages
+man-pages
+man-pages-ru
+
+# Applications | Clipboard management
+wl-clipboard
+
+# Applications | Sound
+pipewire
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
+wireplumber
+
+# Applications | Sound | Graphical
+pavucontrol
+audacity
+
+# Applications | Video | Graphical
+vlc
+vlc-plugins-extra
+# vlc-plugin-matroska 
+vlc-plugin-ffmpeg
+#vlc-plugins-visualization
+
+# Applications | Secrets
+gnome-keyring
+
+# Applications | Secrets | Graphical
+seahorse
+
+# Applications | Windows compatibility
+wine-staging
+wine-gecko
+wine-mono
+
+# Applications | Management
+# Applications | Management | Graphical
+obsidian
+
+# Applications | Applications packages
+flatpak
+
+# Applications | Applications packages | Management | Graphical
+bazaar
+
+# Applications | Screenshots | Graphical
+grim
+slurp
+satty
+
+# Applications | Social | Graphical
+telegram-desktop
+
+# Applications | Games | Graphical
+steam
+kpat
+
+# Applications | Documents
+# Applications | Documents | Graphical
+libreoffice-still-ru
+
+# Applications | DevOps
+kubectl
+helm
+terraform
+
+# Applications | Development
+gcc
+base-devel
+cmake
+pyenv
+git
+pre-commit
+clang
+
+# Applications | Development | [pyenv] | dependecy
+openssl
+zlib
+xz
+tk
+zstd
+
+# Applications | Databases
+# Applications | Databases | Graphical
+dbeaver

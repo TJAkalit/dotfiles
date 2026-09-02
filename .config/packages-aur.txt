@@ -1,0 +1,25 @@
+# System
+# System | Desktop
+# System | Desktop | Cursors
+skyrim-cursor-theme
+
+# Applications
+# Applications | Web
+# Applications | Web | Graphical
+yandex-browser
+
+# Applications | Text editor
+# Applications | Text editor | Graphical
+visual-studio-code-bin
+
+# Applications | DevOps
+lfk-bin
+
+# Applications | Documents
+tennis-bin
+
+# Applications | Misc
+asciiquarium
+
+# Applications | System monitoring
+neofetch
