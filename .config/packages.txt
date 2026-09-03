@@ -105,6 +105,7 @@ adobe-source-serif-fonts
 # Applications | Shell
 bash-completion
 tmux
+toilet
 
 # Applications | Shell | [tmux] | dependency
 python-libtmux
