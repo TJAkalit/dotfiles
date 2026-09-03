@@ -244,6 +244,8 @@ libreoffice-still-ru
 kubectl
 helm
 terraform
+skopeo
+crane
 
 # Applications | Development
 gcc

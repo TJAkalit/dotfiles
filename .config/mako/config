@@ -1,0 +1,19 @@
+font=Terminus,Symbols Nerd Font
+background-color=#00001460
+text-color=#ffd60a
+
+width=500
+padding=0,0,0,0
+margin=2,0,2,0
+border-size=0
+border-radius=50
+group-by=app-name,summary,category
+
+[grouped=false]
+format=<b>%s</b>\n%b
+
+[grouped=true]
+format=<b>%a (%g)\n%s</b>\n%b
+
+[mode=do-not-disturb]
+invisible=1

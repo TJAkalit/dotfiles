@@ -1,2 +1,6 @@
 __pycache__
 *.pyc
+# Local customs
+.config/niri/output.kdl
+packages-local.txt
+packages-aur-local.txt

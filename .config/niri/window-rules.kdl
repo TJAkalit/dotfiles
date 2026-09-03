@@ -1,0 +1,140 @@
+// All
+window-rule {
+    draw-border-with-background false
+    clip-to-geometry true
+    geometry-corner-radius 16
+    tiled-state true
+}
+
+// 
+// Windows
+// 
+// Example
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+// Example
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+// Telegram
+window-rule {
+    match app-id="org.telegram.desktop"
+    default-column-width { fixed 512; }
+}
+// Steam popups
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+// Remmina 
+window-rule {
+    match app-id="^org.remmina.Remmina$"
+    default-column-width { proportion 0.66667; }
+}
+window-rule {
+    match app-id="^org.remmina.Remmina$" title="Клиент удалённого рабочего стола Remmina"
+    default-column-width { proportion 0.33333; }
+    default-window-height { proportion 0.5; }
+}
+// Yandex Browser
+window-rule {
+    match title=" - YouTube$"
+    open-floating true
+    open-focused false
+    default-floating-position x=10 y=10 relative-to="top"
+    default-column-width { proportion 0.33333; }
+    default-window-height { proportion 0.5; }
+}
+
+//
+// Common states
+// 
+// Blur
+window-rule {
+    match app-id="Alacritty"
+    background-effect {
+        xray true
+        blur true
+    }
+}
+// Width 1/3
+window-rule {
+    match app-id="^code$"
+    match app-id="^org.gnome.Nautilus$"
+    match app-id="^Yandex-browser$"
+    match app-id="^org.pulseaudio.pavucontrol$"
+    match app-id="^VirtualBox Manager$"
+    match app-id="^libreoffice-writer$"
+    default-column-width { proportion 0.33333; }
+}
+// Height 1/2
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    match app-id="^org.pulseaudio.pavucontrol$"
+    default-window-height { proportion 0.5; }
+    default-column-display "normal"
+}
+
+
+// 
+// States
+// 
+// Screencast indicator
+window-rule {
+    match is-window-cast-target=true
+
+    shadow {
+        on
+        color "#7d0d2d"
+    }
+
+    tab-indicator {
+        active-color "#f38ba8"
+        inactive-color "#7d0d2d"
+    }
+}
+// Screencast block
+window-rule {
+    match app-id="org.telegram.desktop"
+    match app-id="md.obsidian.Obsidian"
+    block-out-from "screencast"
+}
+
+//
+// Layers
+// 
+// Notifications
+layer-rule {
+    match namespace="notifications"
+    opacity 0.999
+    block-out-from "screencast"
+    geometry-corner-radius 52
+    place-within-backdrop true
+    popups {
+        geometry-corner-radius 52
+    }
+    background-effect {
+        blur true
+        xray false
+    }
+}
+// Launcher
+layer-rule {
+    match namespace="^launcher$"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+// Wallpaper
+layer-rule {
+    match namespace="wallpaper"
+    place-within-backdrop true
+}
+// Waybar
+layer-rule {
+    match namespace="waybar"
+}

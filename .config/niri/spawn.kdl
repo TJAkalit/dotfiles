@@ -1,0 +1,4 @@
+// spawn-at-startup "waybar"
+// spawn-at-startup "flameshot"
+spawn-at-startup "swayidle"
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

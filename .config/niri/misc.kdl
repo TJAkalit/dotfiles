@@ -1,0 +1,29 @@
+prefer-no-csd
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+animations {
+    // off
+    slowdown 1.25
+}
+
+// screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path null
+
+overview {
+    zoom 0.6
+
+    workspace-shadow {
+        off
+    }
+}
+
+blur {
+    // off
+    passes 2
+    offset 1.5
+    noise 0.0
+    saturation 1.5
+}

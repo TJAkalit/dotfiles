@@ -1,0 +1,7 @@
+cursor {
+    xcursor-theme "Skyrim"
+    xcursor-size 30
+
+    // hide-when-typing
+    // hide-after-inactive-ms 1000
+}

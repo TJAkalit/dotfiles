@@ -1,2 +1,7 @@
 #!/bin/bash
-grep -v '#' ~/.config/packages.txt | awk '{if ($NF) print}' | sudo pacman -S --needed -
+(
+    /usr/bin/cat \
+        packages.txt \
+        packages-local.txt 2> /dev/null) |\
+grep -v '#' | awk '{if ($NF) print}' |\
+sudo pacman -S --needed -
