@@ -6,7 +6,7 @@ live_config_reload = true
 padding = { x = 10, y = 10}
 dynamic_padding = true
 decorations = "None"
-opacity = 0.5
+opacity = 0.65
 
 [scrolling]
 history = 100000
@@ -16,7 +16,7 @@ normal = {
     family = 'JetBrainsMono NFM',
     style = 'ExtraLight'
 }
-size = 16
+size = 14
 
 [colors]
 primary = {

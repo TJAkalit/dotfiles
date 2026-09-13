@@ -72,6 +72,7 @@ fuzzel
 
 # System | Desktop | Wallpaper
 swaybg
+awww
 
 # System | Desktop | Sleep
 swayidle
@@ -137,6 +138,7 @@ qbittorrent
 # Applications | Network
 traceroute
 networkmanager-openvpn
+bind
 
 # Applications | Network | [sshuttle] | dependecy
 iptables-legacy
@@ -159,11 +161,19 @@ nautilus
 gvfs-smb
 file-roller
 
+# Applications | Archives
+unzip
+
 # Applications | Show text file content
 bat
 
 # Applications | Text editor
 vim
+nvim
+
+# Applications | Text editor | [nvim]
+ripgrep
+
 # Applications | Text editor | Graphical
 
 # Applications | Pictures
@@ -245,6 +255,8 @@ libreoffice-still-ru
 kubectl
 helm
 terraform
+# tmp
+terragrunt
 skopeo
 crane
 
@@ -256,6 +268,9 @@ pyenv
 git
 pre-commit
 clang
+nvm
+# ?
+lazygit
 
 # Applications | Development | [pyenv] | dependecy
 openssl

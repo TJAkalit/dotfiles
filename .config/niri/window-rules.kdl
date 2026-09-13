@@ -1,3 +1,10 @@
+// workspace "1"
+// workspace " "
+// workspace " "
+// workspace " "
+// workspace "󱎓 "
+
+
 // All
 window-rule {
     draw-border-with-background false
@@ -24,11 +31,11 @@ window-rule {
     match app-id="org.telegram.desktop"
     default-column-width { fixed 512; }
 }
-// Steam popups
-window-rule {
-    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
-}
+// // Steam popups
+// window-rule {
+//     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+//     default-floating-position x=10 y=10 relative-to="bottom-right"
+// }
 // Remmina 
 window-rule {
     match app-id="^org.remmina.Remmina$"
@@ -49,12 +56,18 @@ window-rule {
     default-window-height { proportion 0.5; }
 }
 
+// window-rule {
+//     match app-id="code"
+//     opacity 0.92
+// }
+
 //
 // Common states
 // 
 // Blur
 window-rule {
     match app-id="Alacritty"
+    match app-id="code"
     background-effect {
         xray true
         blur true
@@ -64,16 +77,21 @@ window-rule {
 window-rule {
     match app-id="^code$"
     match app-id="^org.gnome.Nautilus$"
-    match app-id="^Yandex-browser$"
     match app-id="^org.pulseaudio.pavucontrol$"
     match app-id="^VirtualBox Manager$"
     match app-id="^libreoffice-writer$"
     default-column-width { proportion 0.33333; }
 }
+// Width 2/3
+window-rule {
+    match app-id="^yandex-browser$"
+    default-column-width { proportion 0.66667; }
+}
 // Height 1/2
 window-rule {
     match app-id="^org.gnome.Nautilus$"
     match app-id="^org.pulseaudio.pavucontrol$"
+    match app-id="Alacritty"
     default-window-height { proportion 0.5; }
     default-column-display "normal"
 }
@@ -88,12 +106,12 @@ window-rule {
 
     shadow {
         on
-        color "#7d0d2d"
+        color "#ff0000"
     }
 
     tab-indicator {
-        active-color "#f38ba8"
-        inactive-color "#7d0d2d"
+        active-color "#ff0000"
+        inactive-color "#ff00007e"
     }
 }
 // Screencast block
@@ -132,6 +150,7 @@ layer-rule {
 // Wallpaper
 layer-rule {
     match namespace="wallpaper"
+    match namespace="awww-daemon"
     place-within-backdrop true
 }
 // Waybar

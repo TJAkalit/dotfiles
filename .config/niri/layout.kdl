@@ -31,6 +31,15 @@ layout {
         gradient from="#00356600" to="#ffd60aAA" angle=30
     }
 
+    tab-indicator {
+        width 8
+        gap 8
+        length total-proportion=1.0
+        position "top"
+        place-within-column
+        active-gradient from="#003566" to="#ffd60a" angle=30 relative-to="workspace-view"
+    }
+
     shadow {
         // on
         off
