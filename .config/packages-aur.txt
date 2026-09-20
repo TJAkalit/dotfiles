@@ -1,4 +1,6 @@
 # System
+# System | Fonts
+ttf-times-new-roman
 # System | Desktop
 # System | Desktop | Cursors
 skyrim-cursor-theme

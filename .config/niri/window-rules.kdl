@@ -1,69 +1,20 @@
 // workspace "1"
-// workspace " "
+workspace " "
+workspace "󱕱 "
+workspace "󱎓 "
 // workspace " "
 // workspace " "
 // workspace "󱎓 "
 
-
-// All
+//
+// Common
+//
 window-rule {
     draw-border-with-background false
     clip-to-geometry true
     geometry-corner-radius 16
     tiled-state true
 }
-
-// 
-// Windows
-// 
-// Example
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-// Example
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-// Telegram
-window-rule {
-    match app-id="org.telegram.desktop"
-    default-column-width { fixed 512; }
-}
-// // Steam popups
-// window-rule {
-//     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
-//     default-floating-position x=10 y=10 relative-to="bottom-right"
-// }
-// Remmina 
-window-rule {
-    match app-id="^org.remmina.Remmina$"
-    default-column-width { proportion 0.66667; }
-}
-window-rule {
-    match app-id="^org.remmina.Remmina$" title="Клиент удалённого рабочего стола Remmina"
-    default-column-width { proportion 0.33333; }
-    default-window-height { proportion 0.5; }
-}
-// Yandex Browser
-window-rule {
-    match title=" - YouTube$"
-    open-floating true
-    open-focused false
-    default-floating-position x=10 y=10 relative-to="top"
-    default-column-width { proportion 0.33333; }
-    default-window-height { proportion 0.5; }
-}
-
-// window-rule {
-//     match app-id="code"
-//     opacity 0.92
-// }
-
-//
-// Common states
-// 
 // Blur
 window-rule {
     match app-id="Alacritty"
@@ -75,17 +26,15 @@ window-rule {
 }
 // Width 1/3
 window-rule {
-    match app-id="^code$"
-    match app-id="^org.gnome.Nautilus$"
-    match app-id="^org.pulseaudio.pavucontrol$"
-    match app-id="^VirtualBox Manager$"
-    match app-id="^libreoffice-writer$"
+    match app-id="code"
+    match app-id="org.gnome.Nautilus"
+    match app-id="org.pulseaudio.pavucontrol"
+    match app-id="VirtualBox Manager"
+    match app-id="libreoffice-writer"
     default-column-width { proportion 0.33333; }
 }
 // Width 2/3
 window-rule {
-    match app-id="^yandex-browser$"
-    default-column-width { proportion 0.66667; }
 }
 // Height 1/2
 window-rule {
@@ -95,11 +44,6 @@ window-rule {
     default-window-height { proportion 0.5; }
     default-column-display "normal"
 }
-
-
-// 
-// States
-// 
 // Screencast indicator
 window-rule {
     match is-window-cast-target=true
@@ -120,6 +64,83 @@ window-rule {
     match app-id="md.obsidian.Obsidian"
     block-out-from "screencast"
 }
+
+//
+// Custom
+//
+// Telegram
+window-rule {
+    match app-id="org.telegram.desktop"
+    default-column-width { fixed 512; }
+}
+// Remmina 
+window-rule {
+    match app-id="^org.remmina.Remmina$"
+    default-column-width { proportion 0.66667; }
+}
+// Remmina - Chose
+window-rule {
+    match app-id="^org.remmina.Remmina$" title="Клиент удалённого рабочего стола Remmina"
+    default-column-width { proportion 0.33333; }
+    default-window-height { proportion 0.5; }
+}
+// Yandex Browser
+window-rule {
+    match app-id="^yandex-browser$"
+    default-column-width { proportion 0.66667; }
+    open-on-workspace " "
+}
+// Yandex Browser - YouTube
+window-rule {
+    match title=" - YouTube$"
+    open-floating true
+    open-focused false
+    default-floating-position x=10 y=10 relative-to="top"
+    default-column-width { proportion 0.33333; }
+    default-window-height { proportion 0.5; }
+}
+// Steam
+window-rule {
+    match app-id="steam"
+    match app-id="dota2"
+    open-on-workspace "󱎓 "
+}
+// Steam - friend list
+window-rule {
+    match app-id="steam" title="Список друзей"
+    // default-window-height { fixed 692; }
+    default-column-width { fixed 449; }
+}
+// Telegram
+window-rule {
+    match app-id="org.telegram.desktop"
+    open-on-workspace "󱕱 "
+}
+// Discord
+window-rule {
+    match app-id="discord"
+    open-on-workspace "󱕱 "
+    default-column-width { proportion 0.33333; }
+}
+
+// 
+// Windows
+// 
+// Example
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+// Example
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+// // Steam popups
+// window-rule {
+//     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+//     default-floating-position x=10 y=10 relative-to="bottom-right"
+// }
 
 //
 // Layers

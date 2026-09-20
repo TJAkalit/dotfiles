@@ -6,7 +6,7 @@ live_config_reload = true
 padding = { x = 10, y = 10}
 dynamic_padding = true
 decorations = "None"
-opacity = 0.65
+opacity = 0.75
 
 [scrolling]
 history = 100000
@@ -48,3 +48,7 @@ blue = "#027aff"
 magenta = "#AE81FF"
 cyan = "#66d9ef"
 white = "#F9F8F5"
+
+[env]
+TERM = "xterm-256color"
+

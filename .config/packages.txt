@@ -78,6 +78,9 @@ awww
 swayidle
 swaylock
 
+# System | Desktop | Widgets
+quickshell
+
 # System | Virtualization
 virtualbox
 virtualbox-host-dkms
@@ -107,6 +110,7 @@ adobe-source-serif-fonts
 bash-completion
 tmux
 toilet
+starship
 
 # Applications | Shell | [tmux] | dependency
 python-libtmux
@@ -154,6 +158,21 @@ blueman
 
 # Applications | Filemanager
 lsd
+yazi
+# [yazi]
+ffmpeg
+7zip
+jq
+poppler
+fd
+ripgrep
+fzf
+zoxide
+resvg
+imagemagick
+
+# pdf
+poppler 
 
 # Applications | Filemanager | Graphical
 nautilus
@@ -250,6 +269,9 @@ kpat
 # Applications | Documents
 # Applications | Documents | Graphical
 libreoffice-still-ru
+
+# Applications | Office | Graphical
+kcalc
 
 # Applications | DevOps
 kubectl
