@@ -4,3 +4,4 @@ __pycache__
 .config/niri/output.kdl
 packages-local.txt
 packages-aur-local.txt
+.config/systemd/user/niri.service.wants/*
