@@ -163,7 +163,7 @@ yazi
 ffmpeg
 7zip
 jq
-poppler
+# poppler
 fd
 ripgrep
 fzf
@@ -172,7 +172,7 @@ resvg
 imagemagick
 
 # pdf
-poppler 
+# poppler 
 
 # Applications | Filemanager | Graphical
 nautilus
