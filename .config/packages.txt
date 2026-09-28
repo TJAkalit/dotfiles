@@ -179,6 +179,9 @@ nautilus
 # Applications | Filemanager | Graphical | [nautilus] | dependecy
 gvfs-smb
 file-roller
+# ? MTP
+android-file-transfer
+gvfs-mtp
 
 # Applications | Archives
 unzip
@@ -293,6 +296,7 @@ clang
 nvm
 # ?
 lazygit
+ninja
 
 # Applications | Development | [pyenv] | dependecy
 openssl

@@ -137,7 +137,7 @@ window-rule {
 }
 window-rule {
     match app-id="Alacritty"
-    default-column-width { proportion 0.6667; }
+    // default-column-width { proportion 0.6667; }
 }
 // // Steam popups
 // window-rule {
