@@ -1,0 +1,14 @@
+[kubernetes]
+disabled = false
+
+[cpp]
+disabled = false
+
+[python]
+symbol = ' '
+
+[sudo]
+disabled = false
+
+[time]
+disabled = false

@@ -9,7 +9,7 @@
 
 * {
     font-family: 'JetBrainsMono NF ExtraLight', 'Symbols Nerd Font';
-    font-size: 14px;
+    font-size: 17px;
     color: @text-color;
 
     padding: 0;
@@ -52,17 +52,17 @@ button:hover {
 }
 
 #workspaces button {
-    background-color: transparent;
+    background: transparent;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(248, 248, 242, 0.15);
 }
 
 #workspaces button.focused, #workspaces button.active {
-    /* background-color: #64727D; */
-    border: 2px solid #64727D ;
-    /* box-shadow: inset 0 -3px #ffffff; */
+    background: transparent;
+    color: inherit;
+    box-shadow: inset 0 -3px #75715e;
 }
 
 #workspaces button.urgent {
@@ -109,9 +109,8 @@ button:hover {
     /* margin: 0 4px; */
     padding: 0 10px;
     border-radius: 20px;
-    /* border-width: 1px;
-    border-color: @primary-color; */
-    background-color: @transparent-color;
+    border: 1px solid rgba(117, 113, 94, 0.2);
+    background: rgba(248, 248, 242, 0.05);
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -328,4 +327,131 @@ label:focus {
 
 #privacy-item.location {
     color: #00afff;
+}
+
+/* Group quick-actions with glass effect */
+#quick-actions {
+    background: rgba(248, 248, 242, 0.05);
+    border-radius: 20px;
+    padding: 0 15px;
+    border: 1px solid rgba(117, 113, 94, 0.3);
+}
+
+#quick-actions:hover {
+    background: rgba(248, 248, 242, 0.15);
+    border-color: rgba(117, 113, 94, 0.5);
+}
+
+#quick-actions > #custom-console,
+#quick-actions > #custom-monitor-off,
+#quick-actions > #custom-mako-clear-notifications {
+    padding: 0 15px;
+    margin: 0 25px;
+    background: transparent;
+    border: 1px solid rgba(117, 113, 94, 0.2);
+}
+
+#quick-actions > #custom-console:hover,
+#quick-actions > #custom-monitor-off:hover,
+#quick-actions > #custom-mako-clear-notifications:hover {
+    background-color: rgba(248, 248, 242, 0.15);
+    border-color: rgba(117, 113, 94, 0.5);
+}
+
+/* Glass effect for power-control group */
+#power-control {
+    background: rgba(248, 248, 242, 0.05);
+    border-radius: 20px;
+    padding: 0 10px;
+    border: 1px solid rgba(117, 113, 94, 0.2);
+}
+
+#power-control:hover {
+    background: rgba(248, 248, 242, 0.15);
+    border-color: rgba(117, 113, 94, 0.5);
+}
+
+#power-control > #battery,
+#power-control > #power-profiles-daemon,
+#power-control > #backlight {
+    margin: 0 8px;
+    background: transparent;
+}
+
+#power-control > #battery:hover,
+#power-control > #power-profiles-daemon:hover,
+#power-control > #backlight:hover {
+    background-color: rgba(248, 248, 242, 0.15);
+}
+
+/* Glass effect for hardware group */
+#hardware {
+    background: rgba(248, 248, 242, 0.05);
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+#hardware:hover {
+    background: rgba(248, 248, 242, 0.15);
+}
+
+#hardware > #cpu,
+#hardware > #memory,
+#hardware > #temperature {
+    margin: 0 8px;
+    background: transparent;
+}
+
+#hardware > #cpu:hover,
+#hardware > #memory:hover,
+#hardware > #temperature:hover {
+    background-color: rgba(248, 248, 242, 0.15);
+}
+
+#quick-actions > #custom-console,
+#quick-actions > #custom-monitor-off,
+#quick-actions > #custom-mako-clear-notifications {
+    padding: 0 15px;
+    margin: 0 25px;
+    background: transparent;
+}
+
+#quick-actions > #custom-console:hover,
+#quick-actions > #custom-monitor-off:hover,
+#quick-actions > #custom-mako-clear-notifications:hover {
+    background-color: rgba(248, 248, 242, 0.15);
+}
+
+#custom-console {
+    color: #66d9ef;
+}
+
+#custom-monitor-off {
+    color: #f92672;
+}
+
+#custom-mako-clear-notifications {
+    color: #a6e22e;
+}
+
+/* Custom power button with glass effect */
+#custom-power {
+    background: rgba(248, 248, 242, 0.05);
+    border-radius: 20px;
+    padding: 0 12px;
+    margin: 0 10px;
+    border: 1px solid rgba(117, 113, 94, 0.2);
+}
+
+#custom-power:hover {
+    background: rgba(248, 248, 242, 0.15);
+    border-color: rgba(117, 113, 94, 0.5);
+}
+
+/* Custom power button with glass effect */
+#custom-power {
+    background: rgba(248, 248, 242, 0.05);
+    border-radius: 20px;
+    padding: 0 12px;
+    margin: 0 10px;
 }
