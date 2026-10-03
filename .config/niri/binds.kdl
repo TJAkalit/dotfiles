@@ -284,7 +284,9 @@ binds {
 
     // Passwords
     // Bars - Mesh - Passport
-    // Mod+Ctrl+F1 repeat=false { spawn-sh "wl-copy example"; }
+    Mod+Ctrl+F1 { spawn-sh "~/.local/bin/password-dit.sh"; }
     // Bars - Mesh - Sudir
-    // Mod+Ctrl+F2 repeat=false { spawn-sh "wl-copy 'example'"; }
+    Mod+Ctrl+F2 { spawn-sh "~/.local/bin/password-sudir.sh"; }
+    // Bars - Mesh - Education
+    Mod+Ctrl+F3 { spawn-sh "~/.local/bin/password-education.sh"; }
 }

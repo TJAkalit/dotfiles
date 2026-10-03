@@ -6,14 +6,14 @@ hotkey-overlay {
 
 animations {
     // off
-    slowdown 1.25
+    slowdown 0.9
 }
 
 // screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 screenshot-path null
 
 overview {
-    zoom 0.4
+    zoom 0.5
 
     workspace-shadow {
         off

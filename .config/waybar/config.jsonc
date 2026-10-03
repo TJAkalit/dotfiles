@@ -2,11 +2,11 @@
 {
   "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 29, // Waybar height (to be removed for auto height)
+  // "height": 29, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "margin-top": 2,
-  "margin-bottom": 2,
-  "spacing": 2, // Gaps between modules (4px)
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "spacing": 4, // Gaps between modules
   // Choose the order of the modules
   // "mode": "overlay",
   "reload_style_on_change": true,
@@ -15,6 +15,7 @@
     "niri/workspaces",
     // "sway/mode",
     // "sway/scratchpad",
+    "keyboard-state",
     "custom/media",
     "group/quick-actions",
   ],
@@ -203,6 +204,9 @@
     },
     "on-click": "pavucontrol",
   },
+  "wireplumber": {
+    "tooltip": true,
+  },
   "custom/media": {
     "format": "{icon} {text}",
     "return-type": "json",
@@ -217,7 +221,7 @@
   },
   "custom/power": {
     "format": "⏻ ",
-    "tooltip": false,
+    "tooltip": true,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/custom_modules/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
@@ -225,6 +229,8 @@
       "reboot": "systemctl reboot",
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate",
+      "lock": "loginctl lock-session",
+      "logout": "qterminal -e '~/.config/waybar/custom_modules/logout.sh'",
     },
   },
   "niri/language": {
@@ -290,6 +296,7 @@
       "custom/monitor-off",
       "custom/mako-clear-notifications",
     ],
+    "tooltip-format": "Quick Actions",
   },
   "custom/console": {
     "format": "󰞷  ",

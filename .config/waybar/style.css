@@ -7,56 +7,73 @@
 @define-color none-color rgba(0, 0, 0, 0.0);
 @define-color transparent-color rgba(0, 0, 20, 0.2);
 
+/* Monokai colors */
+/* Background: #272822 - основной тёмный фон */
+@define-color monokai-bg #272822;
+/* Foreground: #f8f8f2 - основной светлый текст */
+@define-color monokai-fg #f8f8f2;
+/* Comment: #75715e - комментарии */
+@define-color monokai-comment #75715e;
+/* Red: #f92672 - ключевые слова, функции */
+@define-color monokai-red #f92672;
+/* Orange: #f4bd49 - константы, строки */
+@define-color monokai-orange #f4bd49;
+/* Yellow: #f1fa8c - цифры, переменные */
+@define-color monokai-yellow #f1fa8c;
+/* Green: #a6e22e - переменные, классы */
+@define-color monokai-green #a6e22e;
+/* Aqua: #66d9ef - строки, комментарии */
+@define-color monokai-aqua #66d9ef;
+/* Blue: #66d9ef - типы, ссылки */
+@define-color monokai-blue #66d9ef;
+/* Purple: #ae81ff - методы, функции */
+@define-color monokai-purple #ae81ff;
+/* Lighter variants */
+@define-color monokai-gray-dim #2d313c;
+@define-color monokai-gray #3e4451;
+
+
 * {
     font-family: 'JetBrainsMono NF ExtraLight', 'Symbols Nerd Font';
     font-size: 17px;
-    color: @text-color;
+    color: @sec-text-color;
 
     padding: 0;
     margin: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 window#waybar {
-    /* background-color: @bg-color; */
-    background-color: @none-color;
-    /* background-color: @transparent-color; */
+    margin-top: 0;
+}
 
-    /* border-top: 2px solid @primary-color; */
-    /* border-bottom: 2px solid @primary-color; */
-    /* transition-property: background-color; */
-    /* transition-duration: .5s; */
-    /* width: 200px; */
+window#waybar {
+    background-color: @monokai-gray;
 }
 
 window#waybar.hidden {
-    /* opacity: 0.2; */
+    background-color: @monokai-gray-dim;
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
+    color: inherit;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
     box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    /* background-color: #a37800; */
+    color: inherit;
 }
 
 #workspaces button {
-    background: transparent;
+    color: inherit;
 }
 
 #workspaces button:hover {
-    background: rgba(248, 248, 242, 0.15);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #workspaces button.focused, #workspaces button.active {
@@ -70,7 +87,6 @@ button:hover {
 }
 
 #mode {
-    background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -91,7 +107,7 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    /* padding: 0 10px; */
+    color: inherit;
 }
 
 /* Rounded pill-shadow */
@@ -106,211 +122,154 @@ button:hover {
 #language,
 #clock,
 #tray {
-    /* margin: 0 4px; */
     padding: 0 10px;
-    border-radius: 20px;
-    border: 1px solid rgba(117, 113, 94, 0.2);
-    background: rgba(248, 248, 242, 0.05);
+    border-radius: 0;
+    background: transparent;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
 #clock {
-    /* background-color: #64727D; */
 }
 
 #battery {
-    /* background-color: #ffffff; */
-    /* color: #000000; */
+    color: inherit;
 }
 
 #battery.charging, #battery.plugged {
-    /* color: #ffffff; */
     color: #26A65B;
 }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    color: #f53c3c;
-    /* color: #ffffff; */
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
 
 #power-profiles-daemon {
     padding-right: 15px;
+    color: inherit;
 }
 
-#power-profiles-daemon.performance {
-    /* color: #f53c3c; */
-}
-
-#power-profiles-daemon.balanced {
-    /* color: #2980b9; */
-}
-
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver {
-    /* color: #2ecc71; */
+    color: inherit;
 }
 
 label:focus {
-    background-color: #000000;
 }
 
 #cpu {
-    /* background-color: #2ecc71; */
-    /* color: #000000; */
+    color: inherit;
 }
 
 #memory {
-    /* background-color: #9b59b6; */
+    color: inherit;
 }
 
 #disk {
-    background-color: #964B00;
+    color: inherit;
 }
 
 #backlight {
-    /* background-color: #90b1b1; */
+    color: inherit;
 }
 
 #network {
-    /* background-color: #2980b9; */
+    color: inherit;
 }
 
 #network.disconnected {
-    /* background-color: #f53c3c; */
+    color: inherit;
 }
 
 #pulseaudio {
-    /* background-color: #f1c40f; */
-    /* color: #000000; */
+    color: inherit;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: #f92672;
+    color: #ffffff;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    color: inherit;
+    padding: 0 10px;
 }
 
-#wireplumber.muted {
-    background-color: #f53c3c;
+#wireplumber.microphone-mute {
+    background-color: #f92672;
+    color: #ffffff;
+}
+
+
+
+#wireplumber.microphone {
+    color: inherit;
 }
 
 #custom-media {
-    /* background-color: #66cc99; */
-    /* color: #2a5c45; */
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
-    /* background-color: #f0932b; */
+    color: inherit;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    color: #f92672;
 }
 
 #tray {
-    /* background-color: #2980b9; */
+    color: inherit;
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+    color: #888888;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    color: #f92672;
 }
 
 #idle_inhibitor {
-    /* background-color: #2d3436; */
+    color: inherit;
 }
 
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    color: inherit;
 }
 
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
 
-#mpd.stopped {
-    background-color: #90b1b1;
-}
 
-#mpd.paused {
-    background-color: #51a37a;
-}
 
 #language {
-    /* background: #00b093; */
-    /* color: #740864; */
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
+    color: inherit;
 }
 
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
 
-#keyboard-state > label {
-    padding: 0 5px;
-}
 
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
 
 #privacy {
     padding: 0;
+    color: inherit;
 }
 
 #privacy-item {
     padding: 0 5px;
-    color: white;
+    color: inherit;
 }
 
 #privacy-item.screenshare {
@@ -331,15 +290,12 @@ label:focus {
 
 /* Group quick-actions with glass effect */
 #quick-actions {
-    background: rgba(248, 248, 242, 0.05);
-    border-radius: 20px;
+    border-radius: 0;
     padding: 0 15px;
-    border: 1px solid rgba(117, 113, 94, 0.3);
 }
 
 #quick-actions:hover {
-    background: rgba(248, 248, 242, 0.15);
-    border-color: rgba(117, 113, 94, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 #quick-actions > #custom-console,
@@ -348,27 +304,23 @@ label:focus {
     padding: 0 15px;
     margin: 0 25px;
     background: transparent;
-    border: 1px solid rgba(117, 113, 94, 0.2);
 }
 
 #quick-actions > #custom-console:hover,
 #quick-actions > #custom-monitor-off:hover,
 #quick-actions > #custom-mako-clear-notifications:hover {
-    background-color: rgba(248, 248, 242, 0.15);
-    border-color: rgba(117, 113, 94, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Glass effect for power-control group */
 #power-control {
-    background: rgba(248, 248, 242, 0.05);
-    border-radius: 20px;
+    
+    border-radius: 0;
     padding: 0 10px;
-    border: 1px solid rgba(117, 113, 94, 0.2);
 }
 
 #power-control:hover {
-    background: rgba(248, 248, 242, 0.15);
-    border-color: rgba(117, 113, 94, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 #power-control > #battery,
@@ -381,18 +333,18 @@ label:focus {
 #power-control > #battery:hover,
 #power-control > #power-profiles-daemon:hover,
 #power-control > #backlight:hover {
-    background-color: rgba(248, 248, 242, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Glass effect for hardware group */
 #hardware {
-    background: rgba(248, 248, 242, 0.05);
-    border-radius: 20px;
+    
+    border-radius: 0;
     padding: 0 10px;
 }
 
 #hardware:hover {
-    background: rgba(248, 248, 242, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 #hardware > #cpu,
@@ -405,7 +357,7 @@ label:focus {
 #hardware > #cpu:hover,
 #hardware > #memory:hover,
 #hardware > #temperature:hover {
-    background-color: rgba(248, 248, 242, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #quick-actions > #custom-console,
@@ -419,11 +371,11 @@ label:focus {
 #quick-actions > #custom-console:hover,
 #quick-actions > #custom-monitor-off:hover,
 #quick-actions > #custom-mako-clear-notifications:hover {
-    background-color: rgba(248, 248, 242, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #custom-console {
-    color: #66d9ef;
+    color: #a6e22e;
 }
 
 #custom-monitor-off {
@@ -431,27 +383,27 @@ label:focus {
 }
 
 #custom-mako-clear-notifications {
-    color: #a6e22e;
+    color: #66d9ef;
 }
 
 /* Custom power button with glass effect */
 #custom-power {
-    background: rgba(248, 248, 242, 0.05);
-    border-radius: 20px;
+    
+    border-radius: 0;
     padding: 0 12px;
     margin: 0 10px;
-    border: 1px solid rgba(117, 113, 94, 0.2);
 }
 
 #custom-power:hover {
-    background: rgba(248, 248, 242, 0.15);
-    border-color: rgba(117, 113, 94, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Custom power button with glass effect */
-#custom-power {
-    background: rgba(248, 248, 242, 0.05);
-    border-radius: 20px;
-    padding: 0 12px;
-    margin: 0 10px;
+@keyframes flash-blue {
+    0% { color: inherit; }
+    50% { color: #66d9ef; }
+    100% { color: inherit; }
+}
+
+#workspaces button {
+    animation: flash-blue 0.5s ease-out;
 }
