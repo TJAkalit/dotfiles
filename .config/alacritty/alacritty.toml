@@ -3,10 +3,10 @@ import = []
 live_config_reload = true
 
 [window]
-padding = { x = 10, y = 10}
-dynamic_padding = true
+padding = { x = 5, y = 5 }
+dynamic_padding = false
 decorations = "None"
-opacity = 0.75
+opacity = 0.90
 
 [scrolling]
 history = 100000
@@ -16,13 +16,12 @@ normal = {
     family = 'JetBrainsMono NFM',
     style = 'ExtraLight'
 }
-size = 14
+size = 13
 
 [colors]
 primary = {
-    foreground = "#ffd60a",
-    background = "#001d3d",
-    dim_foreground = "#ffc300"
+    foreground = "#f8f8f2",
+    background = "#272822",
 }
 cursor = {
     text = "CellBackground",
@@ -30,24 +29,14 @@ cursor = {
 }
 
 [colors.normal]
-black = "#000000"
-red = "#f92669"
-green = "#a5d333"
-yellow = "#e6db74"
-blue = "#027aff"
-magenta = "#AE81FF"
-cyan = "#66d9ef"
-white = "#F9F8F5"
-
-[colors.bright]
-black = "#000000"
-red = "#f92669"
-green = "#a5d333"
-yellow = "#e6db74"
-blue = "#027aff"
-magenta = "#AE81FF"
-cyan = "#66d9ef"
-white = "#F9F8F5"
+black = "#333333"
+red = "#f92672"
+green = "#a6e22e"
+yellow = "#e2e22e"
+blue = "#6a7ec8"
+magenta = "#8c6bc8"
+cyan = "#56adbc"
+white = "#e3e3dd"
 
 [env]
 TERM = "xterm-256color"

@@ -25,22 +25,22 @@ layout {
     border {
         on
         width 4
-        active-gradient from="#003566" to="#ffd60a" angle=30 relative-to="workspace-view"
-        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        active-gradient from="#6a7ec8FF" to="#e2e22e" angle=0 // relative-to="workspace-view"
+        inactive-gradient from="#505050" to="#808080" angle=45 // relative-to="workspace-view"
     }
 
     insert-hint {
         // off
-        gradient from="#00356600" to="#ffd60aAA" angle=30
+        gradient from="#6a7ec800" to="#ffd60aAA" angle=30
     }
 
     tab-indicator {
         width 8
-        gap 8
+        gap 4
         length total-proportion=1.0
         position "top"
         place-within-column
-        active-gradient from="#003566" to="#ffd60a" angle=30 relative-to="workspace-view"
+        active-gradient from="#6a7ec8ff" to="#e2e22e" angle=90 // relative-to="workspace-view"
     }
 
     shadow {

@@ -1,12 +1,14 @@
 font=JetBrainsMono NF ExtraLight,Symbols Nerd Font
-background-color=#00001460
-text-color=#ffd60a
+background-color=#272822ff
+text-color=#e2e22e
+border-color=#e2e22e
+anchor=bottom-right
 
-width=500
-padding=0,0,0,0
-margin=2,0,2,0
-border-size=0
-border-radius=50
+width=600
+padding=20,20,20,20
+margin=0,0,0,0
+border-size=4
+border-radius=1
 group-by=app-name,summary,category
 
 [grouped=false]

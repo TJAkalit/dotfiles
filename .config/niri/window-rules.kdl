@@ -46,12 +46,12 @@ window-rule {
 
     shadow {
         on
-        color "#ff0000"
+        color "#f92672"
     }
 
     border {
-        active-gradient from="#ff0000" to="#ffd60a" angle=30 relative-to="workspace-view"
-        inactive-gradient from="#990000" to="#808080" angle=45 relative-to="workspace-view"
+        active-gradient from="#f92672" to="#e2e22e" angle=30 relative-to="workspace-view"
+        inactive-gradient from="#8c6bc8" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     tab-indicator {
@@ -153,17 +153,17 @@ window-rule {
 // Notifications
 layer-rule {
     match namespace="notifications"
-    opacity 0.999
+    // opacity 0.999
     block-out-from "screencast"
-    geometry-corner-radius 52
-    place-within-backdrop true
-    popups {
-        geometry-corner-radius 52
-    }
-    background-effect {
-        blur true
-        xray false
-    }
+    // geometry-corner-radius 52
+    // place-within-backdrop true
+    // popups {
+        // geometry-corner-radius 52
+    // }
+    // background-effect {
+    //     blur true
+    //     xray false
+    // }
 }
 // Launcher
 layer-rule {

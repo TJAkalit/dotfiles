@@ -2,5 +2,5 @@
 // spawn-at-startup "flameshot"
 spawn-at-startup "swayidle"
 spawn-at-startup "awww-daemon"
-spawn-at-startup "/home/tjakalit/dev/wp-walls/wp-walls-loop.sh"
+// spawn-at-startup "/home/tjakalit/dev/wp-walls/wp-walls-loop.sh"
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
